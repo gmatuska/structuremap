@@ -1,6 +1,7 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{93877CE0-BA48-4F28-B372-B8E802CEE085}"
 EndProject
@@ -9,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureMap", "StructureMap\StructureMap.csproj", "{3F36EA80-2F9A-4DAD-BA27-5AC6163A2EE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureMap.Testing", "StructureMap.Testing\StructureMap.Testing.csproj", "{63C2742D-B6E2-484F-AFDB-346873075C5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57144C5D-7614-45EA-8F8E-07C62709FEA9} = {57144C5D-7614-45EA-8F8E-07C62709FEA9}
+		{840415D3-247D-449A-BC79-605D0A1C6F81} = {840415D3-247D-449A-BC79-605D0A1C6F81}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureMap.Testing.Widget", "StructureMap.Testing.Widget\StructureMap.Testing.Widget.csproj", "{E21E1651-3E32-47B7-A290-F461E63FEAD2}"
 EndProject

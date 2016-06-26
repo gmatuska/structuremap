@@ -9,5 +9,7 @@ using System.Security;
 //
 
 [assembly: AssemblyTitle("StructureMap")]
+#if !NCRUNCH
 [assembly: AllowPartiallyTrustedCallers]
+#endif
 [assembly: CLSCompliant(true)]

@@ -6,5 +6,7 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("StructureMap.DynamicInterception")]
+#if !NCRUNCH
 [assembly: AllowPartiallyTrustedCallers]
+#endif
 [assembly: CLSCompliant(true)]
