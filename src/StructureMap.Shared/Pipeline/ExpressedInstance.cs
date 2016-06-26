@@ -122,7 +122,6 @@ namespace StructureMap.Pipeline
         ///     Register an Action to perform on the object created by this Instance
         ///     before it is returned to the caller
         /// </summary>
-        /// <typeparam name="THandler"></typeparam>
         /// <param name="handler"></param>
         /// <returns></returns>
         public T OnCreation(Expression<Action<IContext, TReturned>> handler)
@@ -136,7 +135,6 @@ namespace StructureMap.Pipeline
         ///     Register an Action to perform on the object created by this Instance
         ///     before it is returned to the caller
         /// </summary>
-        /// <typeparam name="THandler"></typeparam>
         /// <param name="handler"></param>
         /// <param name="description">A description of the action for diagnostic purposes</param>
         /// <returns></returns>
@@ -164,7 +162,7 @@ namespace StructureMap.Pipeline
         ///     Register a Func to potentially decorate or substitute for the object
         ///     created by this Instance before it is returned to the caller
         /// </summary>
-        /// <typeparam name="THandler"></typeparam>
+        /// <param name="description"></param>
         /// <param name="handler"></param>
         /// <returns></returns>
         public T DecorateWith(string description, Func<TPluginType, TPluginType> handler)

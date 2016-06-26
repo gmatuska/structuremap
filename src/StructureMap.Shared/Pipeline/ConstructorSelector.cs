@@ -23,7 +23,7 @@ namespace StructureMap.Pipeline
             new FirstConstructor()
         };
 
-        protected override void apply(Type pluginType, IConfiguredInstance instance)
+        protected override void Apply(Type pluginType, IConfiguredInstance instance)
         {
             if (instance.Constructor == null)
             {

@@ -20,7 +20,7 @@ namespace StructureMap.Testing
 
             Debug.WriteLine(container.WhatDoIHave());
 
-            // Policy should not apply to NormalGuy
+            // Policy should not Apply to NormalGuy
             container.GetInstance<NormalGuy>().Repository.ShouldBeOfType<NormalRepository>();
 
             // Policy should override the repository dependency of SpecialGuy
@@ -29,7 +29,7 @@ namespace StructureMap.Testing
 
         public class SpecialGuyGetsSpecialRepository : ConfiguredInstancePolicy
         {
-            protected override void apply(Type pluginType, IConfiguredInstance instance)
+            protected override void Apply(Type pluginType, IConfiguredInstance instance)
             {
                 if (instance.PluggedType == typeof(SpecialGuy))
                 {

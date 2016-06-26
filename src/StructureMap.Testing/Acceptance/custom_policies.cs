@@ -34,7 +34,7 @@ namespace StructureMap.Testing.Acceptance
         // SAMPLE: connectionstringpolicy
         public class ConnectionStringPolicy : ConfiguredInstancePolicy
         {
-            protected override void apply(Type pluginType, IConfiguredInstance instance)
+            protected override void Apply(Type pluginType, IConfiguredInstance instance)
             {
                 var parameter = instance.Constructor.GetParameters().FirstOrDefault(x => x.Name == "connectionString");
                 if (parameter != null)
@@ -134,7 +134,7 @@ namespace StructureMap.Testing.Acceptance
         // SAMPLE: InjectDatabaseByName
         public class InjectDatabaseByName : ConfiguredInstancePolicy
         {
-            protected override void apply(Type pluginType, IConfiguredInstance instance)
+            protected override void Apply(Type pluginType, IConfiguredInstance instance)
             {
                 instance.Constructor.GetParameters()
                     .Where(x => x.ParameterType == typeof(IDatabase))

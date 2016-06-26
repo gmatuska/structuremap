@@ -188,6 +188,7 @@ namespace StructureMap
         /// Scoping, the Default Instance, and interception.  This method is specifically
         /// meant for registering open generic types
         /// </summary>
+        /// <param name="pluginType"></param>
         /// <param name="lifecycle">Optionally specify the instance scoping for this PluginType</param>
         /// <returns></returns>
         public GenericFamilyExpression For(Type pluginType, ILifecycle lifecycle = null)
@@ -198,19 +199,19 @@ namespace StructureMap
         /// <summary>
         /// Shortcut to make StructureMap return the default object of U casted to T
         /// whenever T is requested.  I.e.:
-        /// For<T>().TheDefault.Is.ConstructedBy(c => c.GetInstance<U>() as T);
+        /// For<T></T>().TheDefault.Is.ConstructedBy(c => c.GetInstance<U></U>() as T);
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <typeparam name="U"></typeparam>
+        /// <typeparam name="TU"></typeparam>
         /// <returns></returns>
-        public LambdaInstance<T, T> Redirect<T, U>() where T : class where U : class
+        public LambdaInstance<T, T> Redirect<T, TU>() where T : class where TU : class
         {
             return
                 For<T>()
                     .Use(
                         "Redirect requests for {0} to the configured default of {1} with a cast".ToFormat(
-                            typeof (T).GetFullName(), typeof (U).GetFullName()), c => {
-                                var raw = c.GetInstance<U>();
+                            typeof (T).GetFullName(), typeof (TU).GetFullName()), c => {
+                                var raw = c.GetInstance<TU>();
                                 var t = raw as T;
                                 if (t == null)
                                     throw new InvalidCastException(raw.GetType().AssemblyQualifiedName +
@@ -335,7 +336,7 @@ namespace StructureMap
 
             /// <summary>
             /// Adds a new instance policy to this container
-            /// that can apply to every object instance created
+            /// that can Apply to every object instance created
             /// by this container
             /// </summary>
             /// <param name="policy"></param>
@@ -346,7 +347,7 @@ namespace StructureMap
 
             /// <summary>
             /// Adds a new instance policy to this container
-            /// that can apply to every object instance created
+            /// that can Apply to every object instance created
             /// by this container
             /// </summary>
             public void Add<T>() where T : IInstancePolicy, new()
@@ -433,8 +434,6 @@ namespace StructureMap
 
         internal bool PoliciesChanged { get; set; }
 
-
-        private static int mutation = 0;
 
         public static bool RegistryExists(IEnumerable<Registry> all, Registry registry)
         {

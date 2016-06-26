@@ -13,7 +13,7 @@ namespace StructureMap.Graph
         /// <summary>
         /// Allows you to create missing registrations for an unknown plugin type
         /// at runtime.
-        /// Return null if this policy does not apply to the given type
+        /// Return null if this policy does not Apply to the given type
         /// </summary>
         PluginFamily Build(Type type);
 

@@ -30,7 +30,7 @@ namespace StructureMap.Testing.Acceptance
         // SAMPLE: LoggerConvention
         public class LoggerConvention : ConfiguredInstancePolicy
         {
-            protected override void apply(Type pluginType, IConfiguredInstance instance)
+            protected override void Apply(Type pluginType, IConfiguredInstance instance)
             {
                 instance.Constructor
                     .GetParameters()

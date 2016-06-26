@@ -3,10 +3,17 @@ using System.Reflection;
 
 namespace StructureMap.AutoMocking.Moq
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MoqFactory
     {
         private readonly Type mockOpenType;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="InvalidOperationException"></exception>
         public MoqFactory()
         {
             Assembly Moq = Assembly.Load("Moq");
@@ -15,6 +22,11 @@ namespace StructureMap.AutoMocking.Moq
                 throw new InvalidOperationException("Unable to find Type Moq.Mock<T> in assembly " + Moq.Location);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public object CreateMock(Type type)
         {
             Type closedType = mockOpenType.MakeGenericType(new[] {type});
@@ -23,6 +35,12 @@ namespace StructureMap.AutoMocking.Moq
             return objectProperty.GetValue(instance, null);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public object CreateMockThatCallsBase(Type type, object[] args)
         {
             Type closedType = mockOpenType.MakeGenericType(new[] {type});

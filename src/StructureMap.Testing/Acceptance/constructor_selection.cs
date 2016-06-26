@@ -53,7 +53,7 @@ namespace StructureMap.Testing.Acceptance
     {
         public ConstructorInfo Find(Type pluggedType, DependencyCollection dependencies, PluginGraph graph)
         {
-            // if this rule does not apply to the pluggedType,
+            // if this rule does not Apply to the pluggedType,
             // just return null to denote "not applicable"
             if (!pluggedType.CanBeCastTo<BaseThing>()) return null;
 

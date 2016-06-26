@@ -191,7 +191,7 @@ namespace StructureMap.Configuration.DSL.Expressions
         }
 
         /// <summary>
-        /// Applies a "Use" on this type that will only apply if no other declaration
+        /// Applies a "Use" on this type that will only Apply if no other declaration
         /// is made.  Used for "default" registrations
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -218,7 +218,7 @@ namespace StructureMap.Configuration.DSL.Expressions
         }
 
         /// <summary>
-        /// Applies a "Use" on this type that will only apply if no other declaration
+        /// Applies a "Use" on this type that will only Apply if no other declaration
         /// is made.  Used for "default" registrations
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -233,7 +233,7 @@ namespace StructureMap.Configuration.DSL.Expressions
         }
 
         /// <summary>
-        /// Applies a "Use" on this type that will only apply if no other declaration
+        /// Applies a "Use" on this type that will only Apply if no other declaration
         /// is made.  Used for "default" registrations
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -247,7 +247,7 @@ namespace StructureMap.Configuration.DSL.Expressions
         }
 
         /// <summary>
-        /// Applies a "Use" on this type that will only apply if no other declaration
+        /// Applies a "Use" on this type that will only Apply if no other declaration
         /// is made.  Used for "default" registrations
         /// </summary>
         /// <typeparam name="T"></typeparam>

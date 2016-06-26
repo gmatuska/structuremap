@@ -12,7 +12,7 @@ namespace StructureMap
     public abstract class StructureMapAttribute : Attribute
     {
         /// <summary>
-        /// Override this method to apply a configuration change to an entire
+        /// Override this method to Apply a configuration change to an entire
         /// PluginFamily (every Instance of a certain PluginType)
         /// </summary>
         /// <param name="family"></param>

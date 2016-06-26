@@ -42,7 +42,7 @@ namespace StructureMap.Pipeline
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <example>
-        /// SetLifecycleTo<SingletonLifecycle>()
+        /// SetLifecycleTo<SingletonLifecycle></SingletonLifecycle>()
         /// </example>
         void SetLifecycleTo<T>() where T : ILifecycle, new();
 

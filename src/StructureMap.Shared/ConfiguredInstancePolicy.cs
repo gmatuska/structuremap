@@ -20,7 +20,7 @@ namespace StructureMap
             var configured = instance as IConfiguredInstance;
             if (configured != null)
             {
-                apply(pluginType, configured);
+                Apply(pluginType, configured);
             }
         }
 
@@ -30,7 +30,7 @@ namespace StructureMap
         /// </summary>
         /// <param name="pluginType"></param>
         /// <param name="instance"></param>
-        protected abstract void apply(Type pluginType, IConfiguredInstance instance);
+        protected abstract void Apply(Type pluginType, IConfiguredInstance instance);
     }
     // ENDSAMPLE
 }

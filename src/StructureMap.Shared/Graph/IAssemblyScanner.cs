@@ -136,7 +136,7 @@ namespace StructureMap.Graph
         /// <summary>
         /// Directs the scanning to automatically register any type that is the single
         /// implementation of an interface against that interface.
-        /// The filters apply
+        /// The filters Apply
         /// </summary>
         ConfigureConventionExpression SingleImplementationsOfInterface();
     }
